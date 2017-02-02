@@ -1,4 +1,4 @@
-app.service('PokeService',function($http){
+app.service('PokeService',['$http',function($http){
 
   var API='https://pokeapi.co/api/v2';
 
@@ -22,4 +22,4 @@ this.getPokemon=function(pokemon){
     console.log('error logged',err);
   })
 }
-});
+}]);

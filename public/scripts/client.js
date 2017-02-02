@@ -1,6 +1,6 @@
 var app=angular.module('pokeApp',[]);
 
-app.controller('pokemonController',pokemonController);
+app.controller('pokemonController',['PokeService',pokemonController]);
 
 function pokemonController(PokeService){
   console.log("pokemonController controller loading");
@@ -31,6 +31,7 @@ ctrl.iChooseYou=function(pokemon){
     console.log("imageUrl ::",imageUrl);
     togglePokemon(pokemon);
     ctrl.currentPokemon.imageUrl=imageUrl;
+
 
   })
 
